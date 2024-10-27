@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Protection VPN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smooth Protection VPN</h1>
+        <div class="login-section">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="admin">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="admin">
+            <button id="loginButton">Login</button>
+            <p id="loginMessage"></p>
+        </div>
+        <div class="vpn-interface" id="vpnInterface" style="display:none;">
+            <div class="country-selection">
+                <h2>Select Country</h2>
+                <button onclick="connectVPN('UK')">Connect to UK</button>
+                <button onclick="connectVPN('Germany')">Connect to Germany</button>
+                <button onclick="connectVPN('France')">Connect to France</button>
+                <button onclick="connectVPN('Switzerland')">Connect to Switzerland</button>
+            </div>
+            <div class="protection-levels">
+                <h2>Protection Levels</h2>
+                <button onclick="setProtectionLevel('Low')">Low</button>
+                <button onclick="setProtectionLevel('Medium')">Medium</button>
+                <button onclick="setProtectionLevel('Ultra')">Ultra</button>
+            </div>
+            <div class="features-section">
+                <h2>Features</h2>
+                <button onclick="featureAction('Hide IP')">Hide IP</button>
+                <button onclick="featureAction('Anti-Malware')">Anti-Malware</button>
+                <button onclick="featureAction('Max Protection')">Max Protection</button>
+                <button onclick="featureAction('Additional Security')">Additional Security</button>
+            </div>
+            <p id="connectionStatus"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
